@@ -1,6 +1,7 @@
 import React,{ useState,useEffect } from 'react';
 import Axios from 'axios'
 import CommentCreate from '../CommentCreate/CommentCreate';
+import CommentList from '../CommentList/CommentList';
 
 export default function PostList(){
 
@@ -22,17 +23,22 @@ export default function PostList(){
         <div style={{width:'30%',marginBottom:'20px'}} key={index} className='card'>
             <div className='card-body'>
                 <h3>{p.title}</h3>
-                <CommentCreate></CommentCreate>
+
+                <CommentList postId={p.id} ></CommentList>
+                <CommentCreate postId={p.id}></CommentCreate>
+                
             </div>
         </div> 
         )
     })
-    console.log(Values);
 
   return (
     <div>
-        PostList
+    <h3>PostList</h3>
+    <div className='d-flex flex-row flex-wrap justify-content-between'>
         {Values}
+    </div>
+
     </div>
   )
 }

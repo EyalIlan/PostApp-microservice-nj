@@ -7,7 +7,6 @@ import './App.css';
 function App() {
   return (
     <div className="App container">
-        <h1>hello world</h1>
         <h1>Main Title</h1>
         
         <CreatePost></CreatePost>

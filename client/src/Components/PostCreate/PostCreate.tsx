@@ -22,7 +22,6 @@ export default function PostCreate() {
                 <input className='form-control' onChange={(e) =>{SetPost(e.target.value)}}/>
             </div>
             <button type='submit' className='btn btn-primary'>Submit</button>
-            {post}
         </form>
     </div>
   )
